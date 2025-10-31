@@ -11,30 +11,6 @@
             }
         });
 
-        // SVG Logo Component (Hands supporting a Light Bulb with a Paintbrush/Flame)
-        function ArtisticGiantLogo(color = '#FFCC00', size = '32') {
-            return `
-                <svg width="${size}" height="${size}" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg" class="inline-block">
-                    <!-- Hands (Silver/White) -->
-                    <path d="M10 65C10 65 25 85 45 85C45 85 45 65 25 65C25 65 10 45 10 65Z" fill="#C0C0C0"/>
-                    <path d="M90 65C90 65 75 85 55 85C55 85 55 65 75 65C75 65 90 45 90 65Z" fill="#C0C0C0"/>
-                    
-                    <!-- Light Bulb (Deep Yellow) -->
-                    <circle cx="50" cy="35" r="25" fill="${color}"/>
-                    <path d="M45 60L40 70H60L55 60H45Z" fill="${color}"/>
-                    
-                    <!-- Inner Paintbrush/Flame (Vivid Purple) -->
-                    <path d="M50 45C50 45 52 38 50 30C48 38 50 45 50 45Z" fill="#39005C"/>
-                    
-                    <!-- Rays of Light (Deep Yellow) -->
-                    <line x1="50" y1="5" x2="50" y2="15" stroke="${color}" stroke-width="4" stroke-linecap="round"/>
-                    <line x1="68" y1="12" x2="78" y2="19" stroke="${color}" stroke-width="4" stroke-linecap="round" transform="rotate(30 50 10)"/>
-                    <line x1="85" y1="35" x2="95" y2="35" stroke="${color}" stroke-width="4" stroke-linecap="round" transform="rotate(60 50 35)"/>
-                    <line x1="15" y1="35" x2="25" y2="35" stroke="${color}" stroke-width="4" stroke-linecap="round" transform="rotate(-60 50 35)"/>
-                    <line x1="32" y1="12" x2="22" y2="19" stroke="${color}" stroke-width="4" stroke-linecap="round" transform="rotate(-30 50 10)"/>
-                </svg>
-            `;
-        }
 
         // =========================================================
         // GEMINI API INTEGRATION

@@ -23,7 +23,7 @@
                 <div class="flex items-center">
                     <!-- Logo and Brand Name -->
                     <a href="#" class="flex items-center space-x-2">
-                        <img id="logo-container" class="transform scale-75 block" src="images/agd-no-background.png" alt="ArtisticGiant Logo">
+                        <span id="logo-container" class="transform scale-75 block"><img src="images/no-bg.png" alt=""></span>
                         <span class="comfortaa text-xl sm:text-2xl font-bold text-white tracking-widest leading-none">ArtisticGiant</span>
                     </a>
                 </div>
@@ -313,7 +313,7 @@
                 <!-- Brand Info -->
                 <div class="col-span-1 md:col-span-1">
                     <div class="flex items-center space-x-2 mb-2">
-                        <img id="footer-logo-container" class="transform scale-75 block" src="images/agd-no-background.png" alt="">
+                        <span id="footer-logo-container" class="transform scale-75 block"><img src="images/no-bg.png" alt=""></span>
                         <span class="comfortaa text-xl sm:text-2xl font-bold text-white tracking-widest leading-none">ArtisticGiant</span>
                     </div>
                     <p class="text-silver text-sm italic">
@@ -376,10 +376,6 @@
     </footer>
 
     <script>
-        // Inject the Logo SVG into the header and footer
-        document.getElementById('logo-container').innerHTML = ArtisticGiantLogo('#FFCC00', '48');
-        document.getElementById('footer-logo-container').innerHTML = ArtisticGiantLogo('#FFCC00', '48');
-
         // Initial check for buttons to enable them once the DOM is ready
         document.addEventListener('DOMContentLoaded', () => {
             document.getElementById('generate-prompt-btn').disabled = false;
