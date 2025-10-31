@@ -1,0 +1,28 @@
+        /* Define Brand Colors using CSS variables for easy Tailwind extension */
+        :root {
+            --color-primary: #39005C; /* Vivid Purple */
+            --color-accent: #FFCC00; /* Deep Yellow */
+            --color-silver: #C0C0C0; /* Silver Accent */
+            --font-display: 'Comfortaa', cursive; /* Used for headlines/tagline */
+            --font-body: 'Inter', sans-serif; /* Professional body font */
+        }
+
+        /* Extend Tailwind Configuration */
+        .comfortaa { font-family: var(--font-display); }
+        .inter { font-family: var(--font-body); }
+        
+        .bg-vivid-purple { background-color: var(--color-primary); }
+        .text-vivid-purple { color: var(--color-primary); }
+        .bg-deep-yellow { background-color: var(--color-accent); }
+        .text-deep-yellow { color: var(--color-accent); }
+        .text-silver { color: var(--color-silver); }
+
+        /* Custom Hero Styling for Gradient Effect */
+        .hero-bg {
+            background: linear-gradient(180deg, var(--color-primary) 0%, rgba(57, 0, 92, 0.9) 100%);
+        }
+
+        /* Basic box shadow for cards */
+        .card-shadow {
+            box-shadow: 0 10px 15px -3px rgba(57, 0, 92, 0.5), 0 4px 6px -2px rgba(57, 0, 92, 0.05);
+        }
