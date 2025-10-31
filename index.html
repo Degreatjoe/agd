@@ -12,48 +12,7 @@
     <script src="https://unpkg.com/lucide@latest"></script>
     <link rel="stylesheet" href="styles/styles.css">
 
-    <style>
-    </style>
-    
-    <script>
-        // Simple JS for mobile menu toggle
-        function toggleMenu() {
-            const menu = document.getElementById('mobile-menu');
-            menu.classList.toggle('hidden');
-        }
-
-        // Initialize Lucide icons (for the feather icon set)
-        document.addEventListener('DOMContentLoaded', () => {
-            if (typeof lucide !== 'undefined') {
-                lucide.createIcons();
-            }
-        });
-
-        // SVG Logo Component (Hands supporting a Light Bulb with a Paintbrush/Flame)
-        function ArtisticGiantLogo(color = '#FFCC00', size = '32') {
-            return `
-                <svg width="${size}" height="${size}" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg" class="inline-block">
-                    <!-- Hands (Silver/White) -->
-                    <path d="M10 65C10 65 25 85 45 85C45 85 45 65 25 65C25 65 10 45 10 65Z" fill="#C0C0C0"/>
-                    <path d="M90 65C90 65 75 85 55 85C55 85 55 65 75 65C75 65 90 45 90 65Z" fill="#C0C0C0"/>
-                    
-                    <!-- Light Bulb (Deep Yellow) -->
-                    <circle cx="50" cy="35" r="25" fill="${color}"/>
-                    <path d="M45 60L40 70H60L55 60H45Z" fill="${color}"/>
-                    
-                    <!-- Inner Paintbrush/Flame (Vivid Purple) -->
-                    <path d="M50 45C50 45 52 38 50 30C48 38 50 45 50 45Z" fill="#39005C"/>
-                    
-                    <!-- Rays of Light (Deep Yellow) -->
-                    <line x1="50" y1="5" x2="50" y2="15" stroke="${color}" stroke-width="4" stroke-linecap="round"/>
-                    <line x1="68" y1="12" x2="78" y2="19" stroke="${color}" stroke-width="4" stroke-linecap="round" transform="rotate(30 50 10)"/>
-                    <line x1="85" y1="35" x2="95" y2="35" stroke="${color}" stroke-width="4" stroke-linecap="round" transform="rotate(60 50 35)"/>
-                    <line x1="15" y1="35" x2="25" y2="35" stroke="${color}" stroke-width="4" stroke-linecap="round" transform="rotate(-60 50 35)"/>
-                    <line x1="32" y1="12" x2="22" y2="19" stroke="${color}" stroke-width="4" stroke-linecap="round" transform="rotate(-30 50 10)"/>
-                </svg>
-            `;
-        }
-    </script>
+    <script src="scripts/scripts.js" defer></script>
 </head>
 <body class="inter text-gray-800 antialiased bg-gray-50">
 
@@ -65,7 +24,7 @@
                     <!-- Logo and Brand Name -->
                     <a href="#" class="flex items-center space-x-2">
                         <span id="logo-container" class="transform scale-75 block"></span>
-                        <span class="comfortaa text-2xl font-bold text-white tracking-widest leading-none">ArtisticGiant</span>
+                        <span class="comfortaa text-xl sm:text-2xl font-bold text-white tracking-widest leading-none">ArtisticGiant</span>
                     </a>
                 </div>
                 
@@ -75,6 +34,7 @@
                     <a href="#about" class="text-white hover:text-deep-yellow px-3 py-2 rounded-md text-sm font-medium transition duration-300">About</a>
                     <a href="#values" class="text-white hover:text-deep-yellow px-3 py-2 rounded-md text-sm font-medium transition duration-300">Pillars</a>
                     <a href="#products" class="text-white hover:text-deep-yellow px-3 py-2 rounded-md text-sm font-medium transition duration-300">Products</a>
+                    <a href="#innovation" class="text-white hover:text-deep-yellow px-3 py-2 rounded-md text-sm font-medium transition duration-300 font-bold">Innovation Lab ✨</a>
                     <a href="#contact" class="bg-deep-yellow text-vivid-purple px-4 py-2 rounded-lg text-sm font-bold shadow-md hover:bg-yellow-400 transition duration-300">Contact Us</a>
                 </nav>
 
@@ -92,6 +52,7 @@
                 <a href="#about" onclick="toggleMenu()" class="text-white block px-3 py-2 rounded-md text-base font-medium hover:bg-vivid-purple/70">About</a>
                 <a href="#values" onclick="toggleMenu()" class="text-white block px-3 py-2 rounded-md text-base font-medium hover:bg-vivid-purple/70">Pillars</a>
                 <a href="#products" onclick="toggleMenu()" class="text-white block px-3 py-2 rounded-md text-base font-medium hover:bg-vivid-purple/70">Products</a>
+                <a href="#innovation" onclick="toggleMenu()" class="text-white block px-3 py-2 rounded-md text-base font-bold hover:bg-vivid-purple/70">Innovation Lab ✨</a>
                 <a href="#contact" onclick="toggleMenu()" class="bg-deep-yellow text-vivid-purple block px-3 py-2 rounded-md text-base font-bold mt-2">Contact Us</a>
             </div>
         </div>
@@ -100,18 +61,18 @@
     <main class="pt-20">
         
         <!-- 1. Hero Section -->
-        <section id="home" class="hero-bg py-24 md:py-32 flex items-center min-h-screen-1/2">
+        <section id="home" class="hero-bg py-16 md:py-32 flex items-center min-h-screen-1/2">
             <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-                <h1 class="comfortaa text-6xl md:text-8xl font-extrabold text-white mb-4 leading-tight tracking-tighter">
+                <h1 class="comfortaa text-4xl sm:text-6xl md:text-8xl font-extrabold text-white mb-2 sm:mb-4 leading-tight tracking-tighter">
                     ArtisticGiant
                 </h1>
-                <h2 class="text-4xl md:text-6xl font-extrabold text-deep-yellow mb-8 comfortaa leading-snug">
+                <h2 class="text-2xl sm:text-4xl md:text-6xl font-extrabold text-deep-yellow mb-4 sm:mb-8 comfortaa leading-snug">
                     Domain & Stores
                 </h2>
-                <p class="text-xl md:text-2xl text-silver mb-12 font-medium italic">
+                <p class="text-lg md:text-2xl text-silver mb-8 sm:mb-12 font-medium italic">
                     -Where Creativity Reaches New Heights-
                 </p>
-                <a href="#products" class="bg-deep-yellow text-vivid-purple text-xl font-extrabold py-3 px-8 rounded-full shadow-2xl hover:bg-yellow-400 transform hover:scale-105 transition duration-300 ease-in-out uppercase tracking-wider">
+                <a href="#products" class="bg-deep-yellow text-vivid-purple text-lg sm:text-xl font-extrabold py-3 px-8 rounded-full shadow-2xl hover:bg-yellow-400 transform hover:scale-105 transition duration-300 ease-in-out uppercase tracking-wider">
                     Explore Our Artistry
                 </a>
             </div>
@@ -120,18 +81,19 @@
         <!-- 2. About/Mission/Vision Section -->
         <section id="about" class="py-16 md:py-24 bg-gray-50">
             <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-                <div class="text-center mb-16">
-                    <h3 class="comfortaa text-deep-yellow text-lg font-bold uppercase tracking-widest">Our Story</h3>
-                    <h2 class="text-4xl font-extrabold text-vivid-purple mt-2 sm:text-5xl">
+                <div class="text-center mb-12 sm:mb-16">
+                    <h3 class="comfortaa text-deep-yellow text-base font-bold uppercase tracking-widest">Our Story</h3>
+                    <h2 class="text-3xl font-extrabold text-vivid-purple mt-2 sm:text-5xl">
                         Awakening The Giant Within
                     </h2>
                 </div>
 
-                <div class="grid md:grid-cols-2 gap-12 items-start">
+                <!-- Layout now stacks by default, then goes two columns on MD -->
+                <div class="grid md:grid-cols-2 gap-8 md:gap-12 items-start">
                     <!-- Brand Philosophy -->
-                    <div class="card-shadow p-8 rounded-xl bg-white border border-gray-100">
-                        <h4 class="comfortaa text-3xl font-bold text-vivid-purple mb-4">About ArtisticGiant</h4>
-                        <p class="text-gray-600 text-lg leading-relaxed">
+                    <div class="card-shadow p-6 sm:p-8 rounded-xl bg-white border border-gray-100">
+                        <h4 class="comfortaa text-2xl sm:text-3xl font-bold text-vivid-purple mb-3">About ArtisticGiant</h4>
+                        <p class="text-gray-600 text-base sm:text-lg leading-relaxed">
                             ArtisticGiant Domain and Stores was born from a simple belief - that every artist carries a giant
                             within, waiting to be awakened through creativity and purpose. What started as a small dream to
                             make quality art materials accessible has grown into a haven where imagination takes form and
@@ -140,24 +102,24 @@
                     </div>
 
                     <!-- Mission & Vision -->
-                    <div class="space-y-8">
+                    <div class="space-y-6 sm:space-y-8">
                         <!-- Mission -->
                         <div class="p-6 rounded-xl bg-vivid-purple text-white shadow-xl">
-                            <div class="flex items-center space-x-3 mb-3">
-                                <svg data-lucide="target" class="w-7 h-7 text-deep-yellow"></svg>
-                                <h5 class="comfortaa text-2xl font-bold text-deep-yellow">Our Mission</h5>
+                            <div class="flex items-center space-x-3 mb-2 sm:mb-3">
+                                <svg data-lucide="target" class="w-6 h-6 sm:w-7 sm:h-7 text-deep-yellow"></svg>
+                                <h5 class="comfortaa text-xl sm:text-2xl font-bold text-deep-yellow">Our Mission</h5>
                             </div>
-                            <p class="text-lg leading-relaxed text-gray-200">
+                            <p class="text-base sm:text-lg leading-relaxed text-gray-200">
                                 To inspire creativity and empower artists through quality art materials, innovative designs, and authentic artistic experiences.
                             </p>
                         </div>
                         <!-- Vision -->
                         <div class="p-6 rounded-xl bg-deep-yellow text-vivid-purple shadow-xl">
-                            <div class="flex items-center space-x-3 mb-3">
-                                <svg data-lucide="bar-chart-2" class="w-7 h-7 text-vivid-purple"></svg>
-                                <h5 class="comfortaa text-2xl font-bold text-vivid-purple">Our Vision</h5>
+                            <div class="flex items-center space-x-3 mb-2 sm:mb-3">
+                                <svg data-lucide="bar-chart-2" class="w-6 h-6 sm:w-7 sm:h-7 text-vivid-purple"></svg>
+                                <h5 class="comfortaa text-xl sm:text-2xl font-bold text-vivid-purple">Our Vision</h5>
                             </div>
-                            <p class="text-lg leading-relaxed">
+                            <p class="text-base sm:text-lg leading-relaxed">
                                 To become Africa's most trusted and influential art brand, shaping the future of creativity and visual expression.
                             </p>
                         </div>
@@ -169,107 +131,190 @@
         <!-- 3. Core Values / Pillars Section -->
         <section id="values" class="py-16 md:py-24 bg-vivid-purple">
             <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                <div class="text-center mb-16">
-                    <h3 class="comfortaa text-deep-yellow text-lg font-bold uppercase tracking-widest">Our Foundation</h3>
-                    <h2 class="text-4xl font-extrabold text-white mt-2 sm:text-5xl">
+                <div class="text-center mb-12 sm:mb-16">
+                    <h3 class="comfortaa text-deep-yellow text-base font-bold uppercase tracking-widest">Our Foundation</h3>
+                    <h2 class="text-3xl font-extrabold text-white mt-2 sm:text-5xl">
                         The Six Pillars of ArtisticGiant
                     </h2>
                 </div>
 
-                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Grid now uses 2 columns on small screens, 3 on large -->
+                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
                     <!-- Value Card Template -->
                     
-                    <div class="bg-white p-8 rounded-xl card-shadow text-center transform hover:scale-[1.02] transition duration-300">
-                        <svg data-lucide="hand-heart" class="w-12 h-12 mx-auto text-deep-yellow mb-4"></svg>
-                        <h4 class="comfortaa text-2xl font-bold text-vivid-purple mb-2">SUPPORT</h4>
-                        <p class="text-gray-600">Fostering a foundation of encouragement, akin to the family and friends that uplift the artist's journey.</p>
+                    <div class="bg-white p-6 sm:p-8 rounded-xl card-shadow text-center transform hover:scale-[1.02] transition duration-300">
+                        <svg data-lucide="hand-heart" class="w-10 h-10 sm:w-12 sm:h-12 mx-auto text-deep-yellow mb-3"></svg>
+                        <h4 class="comfortaa text-xl sm:text-2xl font-bold text-vivid-purple mb-2">SUPPORT</h4>
+                        <p class="text-gray-600 text-sm sm:text-base">Fostering a foundation of encouragement, akin to the family and friends that uplift the artist's journey.</p>
                     </div>
 
-                    <div class="bg-white p-8 rounded-xl card-shadow text-center transform hover:scale-[1.02] transition duration-300">
-                        <svg data-lucide="lightbulb" class="w-12 h-12 mx-auto text-deep-yellow mb-4"></svg>
-                        <h4 class="comfortaa text-2xl font-bold text-vivid-purple mb-2">ENLIGHTMENT</h4>
-                        <p class="text-gray-600">Illuminating the artistic path through knowledge, resources, and inspiration.</p>
+                    <div class="bg-white p-6 sm:p-8 rounded-xl card-shadow text-center transform hover:scale-[1.02] transition duration-300">
+                        <svg data-lucide="lightbulb" class="w-10 h-10 sm:w-12 sm:h-12 mx-auto text-deep-yellow mb-3"></svg>
+                        <h4 class="comfortaa text-xl sm:text-2xl font-bold text-vivid-purple mb-2">ENLIGHTMENT</h4>
+                        <p class="text-gray-600 text-sm sm:text-base">Illuminating the artistic path through knowledge, resources, and inspiration.</p>
                     </div>
                     
-                    <div class="bg-white p-8 rounded-xl card-shadow text-center transform hover:scale-[1.02] transition duration-300">
-                        <svg data-lucide="paintbrush" class="w-12 h-12 mx-auto text-deep-yellow mb-4"></svg>
-                        <h4 class="comfortaa text-2xl font-bold text-vivid-purple mb-2">PROVIDING CREATIVITY</h4>
-                        <p class="text-gray-600">Offering the tools and materials that ignite and sustain the creative spark in every individual.</p>
+                    <div class="bg-white p-6 sm:p-8 rounded-xl card-shadow text-center transform hover:scale-[1.02] transition duration-300">
+                        <svg data-lucide="paintbrush" class="w-10 h-10 sm:w-12 sm:h-12 mx-auto text-deep-yellow mb-3"></svg>
+                        <h4 class="comfortaa text-xl sm:text-2xl font-bold text-vivid-purple mb-2">PROVIDING CREATIVITY</h4>
+                        <p class="text-gray-600 text-sm sm:text-base">Offering the tools and materials that ignite and sustain the creative spark in every individual.</p>
                     </div>
 
-                    <div class="bg-white p-8 rounded-xl card-shadow text-center transform hover:scale-[1.02] transition duration-300">
-                        <svg data-lucide="trending-up" class="w-12 h-12 mx-auto text-deep-yellow mb-4"></svg>
-                        <h4 class="comfortaa text-2xl font-bold text-vivid-purple mb-2">GROWTH</h4>
-                        <p class="text-gray-600">Committed to the continuous professional and personal development of the artist community.</p>
+                    <div class="bg-white p-6 sm:p-8 rounded-xl card-shadow text-center transform hover:scale-[1.02] transition duration-300">
+                        <svg data-lucide="trending-up" class="w-10 h-10 sm:w-12 sm:h-12 mx-auto text-deep-yellow mb-3"></svg>
+                        <h4 class="comfortaa text-xl sm:text-2xl font-bold text-vivid-purple mb-2">GROWTH</h4>
+                        <p class="text-gray-600 text-sm sm:text-base">Committed to the continuous professional and personal development of the artist community.</p>
                     </div>
                     
-                    <div class="bg-white p-8 rounded-xl card-shadow text-center transform hover:scale-[1.02] transition duration-300">
-                        <svg data-lucide="book-open-check" class="w-12 h-12 mx-auto text-deep-yellow mb-4"></svg>
-                        <h4 class="comfortaa text-2xl font-bold text-vivid-purple mb-2">ART KNOWLEDGE</h4>
-                        <p class="text-gray-600">Dedicated to sharing expertise and promoting the respect for art in society.</p>
+                    <div class="bg-white p-6 sm:p-8 rounded-xl card-shadow text-center transform hover:scale-[1.02] transition duration-300">
+                        <svg data-lucide="book-open-check" class="w-10 h-10 sm:w-12 sm:h-12 mx-auto text-deep-yellow mb-3"></svg>
+                        <h4 class="comfortaa text-xl sm:text-2xl font-bold text-vivid-purple mb-2">ART KNOWLEDGE</h4>
+                        <p class="text-gray-600 text-sm sm:text-base">Dedicated to sharing expertise and promoting the respect for art in society.</p>
                     </div>
                     
-                    <div class="bg-white p-8 rounded-xl card-shadow text-center transform hover:scale-[1.02] transition duration-300">
-                        <svg data-lucide="star" class="w-12 h-12 mx-auto text-deep-yellow mb-4"></svg>
-                        <h4 class="comfortaa text-2xl font-bold text-vivid-purple mb-2">EXCEPTIONAL</h4>
-                        <p class="text-gray-600">Striving for unparalleled quality in our products, services, and community engagement.</p>
+                    <div class="bg-white p-6 sm:p-8 rounded-xl card-shadow text-center transform hover:scale-[1.02] transition duration-300">
+                        <svg data-lucide="star" class="w-10 h-10 sm:w-12 sm:h-12 mx-auto text-deep-yellow mb-3"></svg>
+                        <h4 class="comfortaa text-xl sm:text-2xl font-bold text-vivid-purple mb-2">EXCEPTIONAL</h4>
+                        <p class="text-gray-600 text-sm sm:text-base">Striving for unparalleled quality in our products, services, and community engagement.</p>
                     </div>
                 </div>
             </div>
         </section>
-        
+
         <!-- 4. Product Offerings Section -->
         <section id="products" class="py-16 md:py-24 bg-gray-50">
             <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                <div class="text-center mb-16">
-                    <h3 class="comfortaa text-deep-yellow text-lg font-bold uppercase tracking-widest">Our Offerings</h3>
-                    <h2 class="text-4xl font-extrabold text-vivid-purple mt-2 sm:text-5xl">
+                <div class="text-center mb-12 sm:mb-16">
+                    <h3 class="comfortaa text-deep-yellow text-base font-bold uppercase tracking-widest">Our Offerings</h3>
+                    <h2 class="text-3xl font-extrabold text-vivid-purple mt-2 sm:text-5xl">
                         Materials & Masterpieces
                     </h2>
                 </div>
                 
-                <div class="grid grid-cols-2 md:grid-cols-5 gap-6 text-center">
+                <!-- Grid now defaults to 2 columns on mobile, 3 on small tablets, and 5 on desktop -->
+                <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 gap-4 sm:gap-6 text-center">
                     
-                    <div class="p-6 rounded-xl bg-vivid-purple text-white transform hover:bg-vivid-purple/90 transition duration-300">
-                        <svg data-lucide="image-plus" class="w-10 h-10 mx-auto text-deep-yellow mb-3"></svg>
-                        <h5 class="comfortaa text-xl font-bold">Paintings</h5>
+                    <div class="p-4 sm:p-6 rounded-xl bg-vivid-purple text-white transform hover:bg-vivid-purple/90 transition duration-300">
+                        <svg data-lucide="image-plus" class="w-8 h-8 sm:w-10 sm:h-10 mx-auto text-deep-yellow mb-2"></svg>
+                        <h5 class="comfortaa text-base sm:text-xl font-bold">Paintings</h5>
                     </div>
                     
-                    <div class="p-6 rounded-xl bg-white border-4 border-deep-yellow/50 text-vivid-purple transform hover:bg-deep-yellow/10 transition duration-300">
-                        <svg data-lucide="user" class="w-10 h-10 mx-auto text-vivid-purple mb-3"></svg>
-                        <h5 class="comfortaa text-xl font-bold">Portraits</h5>
+                    <div class="p-4 sm:p-6 rounded-xl bg-white border-4 border-deep-yellow/50 text-vivid-purple transform hover:bg-deep-yellow/10 transition duration-300">
+                        <svg data-lucide="user" class="w-8 h-8 sm:w-10 sm:h-10 mx-auto text-vivid-purple mb-2"></svg>
+                        <h5 class="comfortaa text-base sm:text-xl font-bold">Portraits</h5>
                     </div>
                     
-                    <div class="p-6 rounded-xl bg-vivid-purple text-white transform hover:bg-vivid-purple/90 transition duration-300">
-                        <svg data-lucide="layers-3" class="w-10 h-10 mx-auto text-deep-yellow mb-3"></svg>
-                        <h5 class="comfortaa text-xl font-bold">Murals</h5>
+                    <div class="p-4 sm:p-6 rounded-xl bg-vivid-purple text-white transform hover:bg-vivid-purple/90 transition duration-300">
+                        <svg data-lucide="layers-3" class="w-8 h-8 sm:w-10 sm:h-10 mx-auto text-deep-yellow mb-2"></svg>
+                        <h5 class="comfortaa text-base sm:text-xl font-bold">Murals</h5>
                     </div>
                     
-                    <div class="p-6 rounded-xl bg-white border-4 border-deep-yellow/50 text-vivid-purple transform hover:bg-deep-yellow/10 transition duration-300">
-                        <svg data-lucide="copy" class="w-10 h-10 mx-auto text-vivid-purple mb-3"></svg>
-                        <h5 class="comfortaa text-xl font-bold">Prints</h5>
+                    <div class="p-4 sm:p-6 rounded-xl bg-white border-4 border-deep-yellow/50 text-vivid-purple transform hover:bg-deep-yellow/10 transition duration-300">
+                        <svg data-lucide="copy" class="w-8 h-8 sm:w-10 sm:h-10 mx-auto text-vivid-purple mb-2"></svg>
+                        <h5 class="comfortaa text-base sm:text-xl font-bold">Prints</h5>
                     </div>
                     
-                    <div class="p-6 rounded-xl bg-vivid-purple text-white transform hover:bg-vivid-purple/90 transition duration-300">
-                        <svg data-lucide="palette" class="w-10 h-10 mx-auto text-deep-yellow mb-3"></svg>
-                        <h5 class="comfortaa text-xl font-bold">Art Supplies</h5>
+                    <div class="p-4 sm:p-6 rounded-xl bg-vivid-purple text-white transform hover:bg-vivid-purple/90 transition duration-300 col-span-2 sm:col-span-1 md:col-span-1">
+                        <!-- Added col-span for better mobile centering of the last item in the 5-item grid -->
+                        <svg data-lucide="palette" class="w-8 h-8 sm:w-10 sm:h-10 mx-auto text-deep-yellow mb-2"></svg>
+                        <h5 class="comfortaa text-base sm:text-xl font-bold">Art Supplies</h5>
                     </div>
                     
                 </div>
             </div>
         </section>
+        
+        <!-- 5. Innovation Lab (Gemini Features) -->
+        <section id="innovation" class="py-16 md:py-24 bg-vivid-purple/95">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center mb-12 sm:mb-16">
+                    <h3 class="comfortaa text-deep-yellow text-base font-bold uppercase tracking-widest">Powered by AI</h3>
+                    <h2 class="text-3xl font-extrabold text-white mt-2 sm:text-5xl">
+                        The ArtisticGiant Innovation Lab
+                    </h2>
+                    <p class="text-silver mt-4 text-sm sm:text-lg">Use the power of LLMs to spark creativity and brand your products.</p>
+                </div>
+
+                <!-- Grid now stacks vertically on mobile (grid-cols-1) and goes to 2 columns on large screens (lg:grid-cols-2) -->
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12">
+                    <!-- Feature 1: Creative Prompt Generator -->
+                    <div class="bg-white p-6 sm:p-8 rounded-xl card-shadow">
+                        <h4 class="comfortaa text-xl sm:text-2xl font-bold text-vivid-purple mb-4 flex items-center">
+                            <svg data-lucide="brush" class="w-6 h-6 mr-2 text-deep-yellow"></svg>
+                            Creative Prompt Generator
+                        </h4>
+                        <p class="text-gray-600 text-sm sm:text-base mb-6">Need an idea? Enter a simple theme (e.g., *'City at night'* or *'Abstract emotion'*), and Gemini will generate a detailed artistic brief.</p>
+                        
+                        <!-- Input and button now properly stack on very small screens -->
+                        <div class="flex flex-col sm:flex-row gap-4 mb-6">
+                            <input id="prompt-theme" type="text" placeholder="e.g., A melancholic forest" class="flex-grow p-3 border border-gray-300 rounded-lg focus:ring-deep-yellow focus:border-deep-yellow inter" />
+                            <button id="generate-prompt-btn" onclick="generateArtPrompt()" class="llm-button bg-deep-yellow text-vivid-purple hover:bg-yellow-400">
+                                <svg data-lucide="sparkles" class="w-5 h-5 mr-1"></svg>
+                                Generate Creative Prompt ✨
+                            </button>
+                        </div>
+                        
+                        <div id="prompt-result" class="mt-4 text-center min-h-[100px] flex items-center justify-center">
+                            <!-- LLM result will be displayed here -->
+                            <p class="text-gray-500 italic">Your artistic spark will appear here.</p>
+                        </div>
+                    </div>
+
+                    <!-- Feature 2: Product Naming Assistant -->
+                    <div class="bg-white p-6 sm:p-8 rounded-xl card-shadow">
+                        <h4 class="comfortaa text-xl sm:text-2xl font-bold text-vivid-purple mb-4 flex items-center">
+                            <svg data-lucide="tag" class="w-6 h-6 mr-2 text-deep-yellow"></svg>
+                            Product Naming Assistant
+                        </h4>
+                        <p class="text-gray-600 text-sm sm:text-base mb-6">Brainstorm professional product names and descriptions for your next line of art materials.</p>
+
+                        <div class="space-y-4">
+                            <!-- Category Input -->
+                            <div>
+                                <label for="product-category" class="block text-sm font-medium text-gray-700 mb-1">Product Category</label>
+                                <select id="product-category" class="w-full p-3 border border-gray-300 rounded-lg focus:ring-deep-yellow focus:border-deep-yellow inter">
+                                    <option value="Acrylic Paint">Acrylic Paint</option>
+                                    <option value="Fine Art Brush Set">Fine Art Brush Set</option>
+                                    <option value="Canvas">Stretched Canvas</option>
+                                    <option value="Sketchbook">Premium Sketchbook</option>
+                                </select>
+                            </div>
+
+                            <!-- Features Input -->
+                            <div>
+                                <label for="product-features" class="block text-sm font-medium text-gray-700 mb-1">Key Features (Comma separated)</label>
+                                <input id="product-features" type="text" placeholder="e.g., oil-based, quick dry, deep pigment, lightfast" class="w-full p-3 border border-gray-300 rounded-lg focus:ring-deep-yellow focus:border-deep-yellow inter" />
+                            </div>
+                        </div>
+                        
+                        <button id="generate-name-btn" onclick="generateProductNames()" class="llm-button bg-vivid-purple text-deep-yellow hover:bg-vivid-purple/80 mt-6 w-full">
+                            <svg data-lucide="award" class="w-5 h-5 mr-1"></svg>
+                            Generate Product Names ✨
+                        </button>
+
+                        <div id="product-naming-result" class="mt-8 text-center min-h-[100px] flex items-center justify-center">
+                            <!-- LLM result will be displayed here -->
+                            <p class="text-gray-500 italic">Suggested names and descriptions will appear here.</p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
 
     </main>
     
     <!-- Footer/Contact Section -->
-    <footer id="contact" class="bg-vivid-purple text-white pt-16 pb-8 border-t-8 border-deep-yellow">
+    <footer id="contact" class="bg-vivid-purple text-white pt-12 pb-8 border-t-8 border-deep-yellow">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="grid grid-cols-1 md:grid-cols-4 gap-8 mb-12">
+            <!-- Grid now stacks by default, then goes to 4 columns on desktop -->
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8 mb-10">
                 <!-- Brand Info -->
-                <div class="col-span-4 md:col-span-1">
-                    <div class="flex items-center space-x-2 mb-4">
+                <div class="col-span-1 md:col-span-1">
+                    <div class="flex items-center space-x-2 mb-2">
                         <span id="footer-logo-container" class="transform scale-75 block"></span>
-                        <span class="comfortaa text-2xl font-bold text-white tracking-widest leading-none">ArtisticGiant</span>
+                        <span class="comfortaa text-xl sm:text-2xl font-bold text-white tracking-widest leading-none">ArtisticGiant</span>
                     </div>
                     <p class="text-silver text-sm italic">
                         ArtisticGiant - a brand built to inspire artists and illuminate their world.
@@ -278,27 +323,27 @@
                 
                 <!-- Quick Links -->
                 <div>
-                    <h5 class="text-lg font-semibold text-deep-yellow mb-4 comfortaa">Quick Links</h5>
-                    <ul class="space-y-2">
+                    <h5 class="text-base font-semibold text-deep-yellow mb-3 comfortaa">Quick Links</h5>
+                    <ul class="space-y-2 text-sm">
                         <li><a href="#about" class="text-white hover:text-deep-yellow transition duration-300">Our Story</a></li>
                         <li><a href="#values" class="text-white hover:text-deep-yellow transition duration-300">Core Pillars</a></li>
                         <li><a href="#products" class="text-white hover:text-deep-yellow transition duration-300">Products</a></li>
-                        <li><a href="#home" class="text-white hover:text-deep-yellow transition duration-300">Home</a></li>
+                        <li><a href="#innovation" class="text-white hover:text-deep-yellow transition duration-300">Innovation Lab</a></li>
                     </ul>
                 </div>
                 
                 <!-- Contact Info -->
                 <div>
-                    <h5 class="text-lg font-semibold text-deep-yellow mb-4 comfortaa">Reach Out</h5>
-                    <ul class="space-y-3">
+                    <h5 class="text-base font-semibold text-deep-yellow mb-3 comfortaa">Reach Out</h5>
+                    <ul class="space-y-3 text-sm">
                         <li class="flex items-center space-x-2">
-                            <svg data-lucide="mail" class="w-5 h-5 text-silver"></svg>
+                            <svg data-lucide="mail" class="w-4 h-4 text-silver"></svg>
                             <a href="mailto:artisticgiantdomain@gmail.com" class="text-white hover:text-deep-yellow transition duration-300">
                                 artisticgiantdomain@gmail.com
                             </a>
                         </li>
                         <li class="flex items-center space-x-2">
-                            <svg data-lucide="phone" class="w-5 h-5 text-silver"></svg>
+                            <svg data-lucide="phone" class="w-4 h-4 text-silver"></svg>
                             <span class="text-white">07062913683, 09039338432</span>
                         </li>
                     </ul>
@@ -306,24 +351,24 @@
                 
                 <!-- Social Media -->
                 <div>
-                    <h5 class="text-lg font-semibold text-deep-yellow mb-4 comfortaa">Connect</h5>
+                    <h5 class="text-base font-semibold text-deep-yellow mb-3 comfortaa">Connect</h5>
                     <div class="flex space-x-4">
                         <a href="#" class="text-silver hover:text-deep-yellow transition duration-300" aria-label="Facebook">
-                            <svg data-lucide="facebook" class="w-7 h-7"></svg>
+                            <svg data-lucide="facebook" class="w-6 h-6"></svg>
                         </a>
                         <a href="#" class="text-silver hover:text-deep-yellow transition duration-300" aria-label="Twitter">
-                            <svg data-lucide="twitter" class="w-7 h-7"></svg>
+                            <svg data-lucide="twitter" class="w-6 h-6"></svg>
                         </a>
                         <a href="#" class="text-silver hover:text-deep-yellow transition duration-300" aria-label="Instagram">
-                            <svg data-lucide="instagram" class="w-7 h-7"></svg>
+                            <svg data-lucide="instagram" class="w-6 h-6"></svg>
                         </a>
                     </div>
                 </div>
             </div>
             
             <!-- Copyright -->
-            <div class="border-t border-deep-yellow/30 pt-4 mt-8 text-center">
-                <p class="text-sm text-silver">
+            <div class="border-t border-deep-yellow/30 pt-4 mt-6 text-center">
+                <p class="text-xs text-silver">
                     &copy; 2025 ArtisticGiant Domain and Stores. All rights reserved.
                 </p>
             </div>
@@ -334,6 +379,13 @@
         // Inject the Logo SVG into the header and footer
         document.getElementById('logo-container').innerHTML = ArtisticGiantLogo('#FFCC00', '48');
         document.getElementById('footer-logo-container').innerHTML = ArtisticGiantLogo('#FFCC00', '48');
+
+        // Initial check for buttons to enable them once the DOM is ready
+        document.addEventListener('DOMContentLoaded', () => {
+            document.getElementById('generate-prompt-btn').disabled = false;
+            document.getElementById('generate-name-btn').disabled = false;
+            if (typeof lucide !== 'undefined') { lucide.createIcons(); } // Final icon initialization
+        });
     </script>
 </body>
 </html>
